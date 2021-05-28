@@ -69,9 +69,7 @@ class ListaLancamento extends React.Component {
         return(
             <div>
                 <h1 id="tabelLabel" >Lançamentos do caixa</h1>
-                <p>
-                    
-                </p>
+        
                 {contents}
             </div>
         );

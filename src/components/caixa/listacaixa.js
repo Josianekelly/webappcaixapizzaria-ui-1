@@ -63,16 +63,16 @@ class ListaCaixa extends Component {
                             <td>{caixacontrole.flagcaixafechado}</td>
 
                             <td>
-                                <button className="btn btn-success" onClick={(id) => this.handleEdit(caixacontrole.id)}>Fechar Caixa</button> &nbsp;
+                                <button className="btn btn-success" onClick={(id) => this.handleEdit(caixacontrole.id)}>Fechar Caixa</button>
                             </td>
                             <td>
-                                <button className="btn btn-danger" onClick={(id) => this.handleLancamento(caixacontrole.id)}>Ver Lancamentos</button>
+                                <button className="btn btn-danger" onClick={(id) => this.handleLancamento(caixacontrole.id)}>Ver Lançamentos</button>
                             </td>
                             <td>
                                 <button className="btn btn-danger" onClick={(id) => this.handleRecebecomanda(caixacontrole.id)}>Receber Comanda</button>
                             </td>
                             <td>
-                                <button className="btn btn-danger" onClick={(id) => this.handleLancasangria(caixacontrole.id)}>Lanca Sangria</button>
+                                <button className="btn btn-danger" onClick={(id) => this.handleLancasangria(caixacontrole.id)}>Lançar Sangria</button>
                             </td>
                         </tr>
                     )}
@@ -90,7 +90,6 @@ class ListaCaixa extends Component {
         return (
             <div>
                 <h1 id="tabelLabel" >Controles de Caixas</h1>
-             <br/>
                 {contents}
             </div>
         );

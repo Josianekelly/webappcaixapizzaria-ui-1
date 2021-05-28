@@ -21,9 +21,9 @@ export default class App extends Component {
   render() {
     return (
       <Router>
+            <Route path='/login' component={Login}/>
         <Layout>
           <Route exact path='/' component={Home}/>
-          <Route path='/login' component={Login}/>
           <Route path='/funcionario-lista' component={ListaFuncionario}/>
           <Route path='/caixa-abertura' component={AddAberturaCaixa}/>
           <Route path='/caixa-recebe/:id' component={AddCaixaRecebe}/>

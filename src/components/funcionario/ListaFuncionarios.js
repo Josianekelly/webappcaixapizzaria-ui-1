@@ -6,7 +6,7 @@ export class ListaFuncionario extends Component {
 
     constructor() {
         super();
-        this.state = { funcionarios: [], loading: true}
+        this.state = { funcionarios: [], loading: true }
     }
 
     componentDidMount() {
@@ -22,7 +22,7 @@ export class ListaFuncionario extends Component {
             return;
         }
         else {
-            fetch(URL_API + '/api/funcionarios' + id, {method : 'delete'})
+            fetch(URL_API + '/api/funcionarios' + id, { method: 'delete' })
                 .then(json => {
                     alert('Deletado com sucesso!');
                 })
@@ -30,10 +30,10 @@ export class ListaFuncionario extends Component {
     }
 
     static renderFuncionariosTabela(funcionarios) {
-        
+
         return (
             <table className='table table-striped' aria-labelledby="tabelLabel">
-              <thead>
+                <thead>
                     <tr>
                         <th>Código</th>
                         <th>Nome</th>
@@ -48,6 +48,9 @@ export class ListaFuncionario extends Component {
 
                             <td>
                                 <button className="btn btn-success" onClick={(id) => this.handleEdit(funcionario.id)}>Edit</button> &nbsp;
+
+                            </td>
+                            <td>
                                 <button className="btn btn-danger" onClick={(id) => this.handleDelete(funcionario.id)}>Delete</button>
                             </td>
                         </tr>
@@ -57,16 +60,16 @@ export class ListaFuncionario extends Component {
         );
     }
 
-    render () {
+    render() {
         let contents = this.state.loading
-        ? <p><em>Carregando...</em></p>
-        : ListaFuncionario.renderFuncionariosTabela(this.state.funcionarios);
+            ? <p><em>Carregando...</em></p>
+            : ListaFuncionario.renderFuncionariosTabela(this.state.funcionarios);
 
-        return(
+        return (
             <div>
                 <h1 id="tabelLabel" >Funcionarios</h1>
                 <p>
-                    
+
                 </p>
                 {contents}
             </div>
@@ -76,6 +79,6 @@ export class ListaFuncionario extends Component {
     async populaFuncionarioData() {
         const response = await fetch(URL_API + '/api/funcionarios');
         const data = await response.json();
-        this.setState({funcionarios : data, loading: false});
+        this.setState({ funcionarios: data, loading: false });
     }
 }
