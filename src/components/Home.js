@@ -5,9 +5,9 @@ export class Home extends Component {
 
   render () {
     return (
-      <div className="box">
+      <div className="box text-center">
         <br />
-        <h2>Seja vem vindo!</h2>
+        <h2>Seja bem vindo!</h2>
         <br />
         <h3>Esse aplicativo controla abertura de caixa, os lançamentos do caixa e seu fechamento!</h3>
         <hr />
