@@ -34,8 +34,8 @@ class ListaCaixa extends Component {
     static renderCaixacontrolesTabela(caixacontroles) {
 
         return (
-           <div className="row">
-            <table className="table table-striped" aria-labelledby="tabelLabel">
+        
+            <table className="table table-striped table-responsive" aria-labelledby="tabelLabel">
                 <thead className="thead-dark">
                     <tr>
                         <th>Código</th>
@@ -78,7 +78,7 @@ class ListaCaixa extends Component {
                     )}
                 </tbody>
             </table>
-            </div>
+          
         );
     }
 
