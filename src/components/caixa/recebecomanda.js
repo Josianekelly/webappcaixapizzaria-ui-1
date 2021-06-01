@@ -71,12 +71,12 @@ export class AddCaixaRecebe extends React.Component {
 
     render() {
         return (
-            <div class="container">
+            <div class="container-fluid">
                 <ToastContainer />
                 <div class="card-form mx-auto shadow -lg p-5 mb-5 bg-white rounded animate_animated animate_zoomIn">
-                    <h2>
-                        <span className="font-weight-bold">Recebimento da Comanda</span>
-                    </h2>
+                   
+                        <h3 className="font-weight-bold">Recebimento da Comanda</h3>
+                   
                     <br />
 
                     <Form onSubmit={this.handleSubmit}>

@@ -33,7 +33,7 @@ export class ListaFuncionario extends Component {
 
         return (
             <table className='table table-striped' aria-labelledby="tabelLabel">
-                <thead>
+                <thead className="thead-dark">
                     <tr>
                         <th>Código</th>
                         <th>Nome</th>

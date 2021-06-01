@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import URL_API from '../../service/service-api';
 import { withRouter } from 'react-router-dom';
-import NumberFormat from 'react-number-format';
+
 
 
 

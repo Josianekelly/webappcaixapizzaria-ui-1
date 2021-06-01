@@ -5,7 +5,7 @@ export class Home extends Component {
 
   render () {
     return (
-      <div className="box text-center">
+      <div className="container-fluid text-center">
         <br />
         <h2>Seja bem vindo!</h2>
         <br />

@@ -59,17 +59,17 @@ class AddCaixaSangria extends React.Component {
         
     render() {
         return (
-            <div class="container">
+            <div class="container-fluid">
                 <ToastContainer />
                 <div class="card-form mx-auto shadow -lg p-5 mb-5 bg-white rounded animate_animated animate_zoomIn">
-                    <h2>
-                        <span className="font-weight-bold">Lançamento de Sangria</span>
-                    </h2>
+                   
+                        <h3 className="font-weight-bold">Lançamento de Sangria</h3>
+                    
                     <br />
 
                     <Form onSubmit={this.handleSubmit}>
                         <div className="row">
-                            <div className="col-12 col-md-6">
+                            <div className="col-12">
                                 <FormGroup>
                                     <Label>Data/Hora:</Label>
                                     <Input

@@ -92,15 +92,16 @@ class FechamentoCaixa extends React.Component {
 
     render() {
         return(
-            <div class="container">
+            <div class="container-fluid">
 
                 <ToastContainer />
                 <div class="card-form mx-auto shadow -lg p-5 mb-5 mt-5 bg-white rounded animate_animated animate_zoomIn">
-                    <h2>
-                        <span className="col-12 font-weight-bold">Fechamento de Caixa</span>
-                    </h2>
+                   
+                        <h3 className="font-weight-bold">Fechamento de Caixa</h3>
+                  
                     <br />
                     <Form onSubmit={this.handleSalve}>
+                        <div className="row">
                         <div className="col-12">
                             <FormGroup>
                                 <Label>Data/Hora Fechamento:</Label>
@@ -124,6 +125,7 @@ class FechamentoCaixa extends React.Component {
 
                             <br />
                             <Button className="offset-md-8 col-md-4 btn-lg btn-dark btn-block" type="submit" value="Enviar">Confirmar</Button>
+                        </div>
                         </div>
                     </Form>
                 </div>

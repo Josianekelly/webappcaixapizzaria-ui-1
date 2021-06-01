@@ -29,8 +29,8 @@ class ListaLancamento extends React.Component {
     static renderCaixaLancamentoTabela(caixalancamentos) {
         
         return (
-            <table className='table table-striped' aria-labelledby="tabelLabel">
-              <thead>
+            <table className='table table-striped table-responsive' aria-labelledby="tabelLabel">
+              <thead className="thead-dark">
                     <tr>
                         <th>Código</th>
                         <th>Caixa</th>
