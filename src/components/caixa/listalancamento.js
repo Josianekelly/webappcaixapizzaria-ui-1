@@ -3,7 +3,7 @@ import URL_API from '../../service/service-api';
 import { withRouter} from 'react-router-dom';
 
 class ListaLancamento extends React.Component {
-    static displayName = "Lista de Lançamentos de Caixa";
+    static displayName = "Lista Lançamentos de Caixa";
 
     constructor(props) {
         super(props);
@@ -19,7 +19,7 @@ class ListaLancamento extends React.Component {
             return;
         }
         else {
-            fetch(URL_API + '/api/caixalancamentoes' + id, {method : 'delete'})
+            fetch(URL_API + '/api/caixalancamentos' + id, {method : 'delete'})
                 .then(json => {
                     alert('Deletado com sucesso!');
                 })
@@ -42,7 +42,7 @@ class ListaLancamento extends React.Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {caixalancamentos.map(caixalancamento =>
+                    {caixalancamentos.reverse().map(caixalancamento =>
                         <tr key={caixalancamento.id}>
                             <td>{caixalancamento.id}</td>
                             <td>{caixalancamento.idcaixacontrole}</td>
@@ -78,7 +78,7 @@ class ListaLancamento extends React.Component {
     async populaCaixaLancamentoData() {
         
         var idcx = this.props.match.params["id"]
-        const response = await fetch(URL_API + '/api/caixalancamentoes/caixa/'+idcx+'/lancamento');
+        const response = await fetch(URL_API + '/api/caixalancamentos/caixa/'+idcx+'/lancamento');
         const data = await response.json();
         this.setState({caixalancamentos : data, loading: false});
     }

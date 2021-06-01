@@ -1,15 +1,27 @@
 import React, { Component } from 'react'
 import URL_API from '../../service/service-api';
 import { withRouter } from 'react-router-dom';
+import NumberFormat from 'react-number-format';
+
 
 
 class ListaCaixa extends Component {
+    
+  
+    
     static displayName = "Lista de Abertura/Fechamento de Caixas";
 
     constructor() {
         super();
+      
         this.state = { caixacontroles: [], loading: true }
+        
     }
+
+    
+
+    
+
 
     componentDidMount() {
         this.populaCaixacontroleData();
@@ -55,7 +67,9 @@ class ListaCaixa extends Component {
                     {caixacontroles.reverse().map(caixacontrole =>
                         <tr key={caixacontrole.id}>
                             <td> {caixacontrole.id} </td>
-                            <td>{caixacontrole.datahoraabertura} </td>
+                            <td> 
+                               {caixacontrole.datahoraabertura}
+                                </td>
                             <td>{caixacontrole.idfuncionario}</td>
                             <td>{caixacontrole.valorfundocaixa}</td>
                             <td>{caixacontrole.datahorafechamento}</td>

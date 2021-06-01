@@ -38,6 +38,7 @@ export class ListaFuncionario extends Component {
                         <th>Código</th>
                         <th>Nome</th>
                         <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -47,7 +48,7 @@ export class ListaFuncionario extends Component {
                             <td>{funcionario.fun_nome} </td>
 
                             <td>
-                                <button className="btn btn-success" onClick={(id) => this.handleEdit(funcionario.id)}>Edit</button> &nbsp;
+                                <button className="btn btn-success" onClick={(id) => this.handleEdit(funcionario.id)}>Editar</button> &nbsp;
 
                             </td>
                             <td>
